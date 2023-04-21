@@ -32,7 +32,8 @@ const Layout = ({ children }: Props) => {
           <h1 className="text-3xl font-bold ml-4">Matthew Nyce</h1>
         </div>
         <a
-          href="#"
+          href="/documents/Matthew-Nyce.pdf"
+          target="_blank"
           className="text-text hover:text-primary focus:outline-none"
         >
           Resume
