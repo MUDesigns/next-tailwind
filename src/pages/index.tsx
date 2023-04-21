@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-// deploy to vercel
+// deploy to vercel, adding to test checkly
 import Layout from "../components/layout";
 import AboutPage from "./about";
 import ContactPage from "./contact";
