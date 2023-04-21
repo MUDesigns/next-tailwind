@@ -22,7 +22,7 @@ const ContactPage = () => {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     try {
-      const response = await fetch("/api/email", {
+      const response = await fetch("/api/index/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
