@@ -1,124 +1,95 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+/* eslint-disable react/no-unescaped-entities */
+import Layout from "../components/layout";
+import AboutPage from "./about";
+import ContactPage from "./contact";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <Layout>
+      <section className="container mx-auto flex flex-col md:flex-row items-center py-20">
+        <div className="md:w-1/2 mb-10 md:mb-0 mx-auto">
+          <h2 className="text-6xl font-bold text-secondary">
+            Matthew Nyce
+          </h2>
+          <h3 className="text-3xl mb-8 text-text text-shadow shadow-accent">
+            Full-Stack Developer
+          </h3>
+          <p className="text-lg leading-7 text-text text-shadow shadow-accent">
+            I'm a full-stack developer with experience in React, Next.js,
+            Node.js, and more. I'm passionate about creating responsive,
+            intuitive web experiences that users love.
+          </p>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      <section className="bg-accent py-20">
+        <div className="container mx-auto">
+          <h2 className="text-5xl font-bold text-center mb-16 text-text">
+            Recent Projects
           </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="bg-secondary rounded-lg shadow-lg hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+              <a href="#">
+                <Image
+                  src="/images/project1.png"
+                  alt="Project 1"
+                  width={500}
+                  height={300}
+                  className="rounded-t-lg"
+                />
+                <div className="p-6">
+                  <h3 className="text-3xl font-bold mb-2 text-primary">Project 1</h3>
+                  <p className="text-lg leading-7 text-primary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec mollis dolor eu tellus dignissim auctor.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div className="bg-secondary rounded-lg shadow-lg hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+              <a href="#">
+                <Image
+                  src="/images/project2.png"
+                  alt="Project 2"
+                  width={500}
+                  height={300}
+                  className="rounded-t-lg"
+                />
+                <div className="p-6">
+                  <h3 className="text-3xl font-bold mb-2 text-primary">Project 2</h3>
+                  <p className="text-lg leading-7 text-primary">
+                    Nullam finibus lacus id tincidunt consectetur. Donec auctor
+                    ipsum et justo commodo, at bibendum massa feugiat.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div className="bg-secondary rounded-lg shadow-lg hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+              <a href="#">
+                <Image
+                  src="/images/project3.png"
+                  alt="Project 3"
+                  width={500}
+                  height={300}
+                  className="rounded-t-lg"
+                />
+                <div className="p-6">
+                  <h3 className="text-3xl font-bold mb-2 text-primary">Project 3</h3>
+                  <p className="text-lg leading-7 text-primary">
+                    Vestibulum dapibus nisl ac lorem bibendum faucibus. Proin
+                    euismod velit sed erat commodo, ut eleifend tellus ultrices.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <AboutPage />
+      <ContactPage />
+    </Layout>
+  );
+};
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Home;
