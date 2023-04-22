@@ -98,7 +98,7 @@ const ContactPage = () => {
               />
             </div>
             <button
-              className="bg-accent hover:bg-secondary hover:text-text text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-secondary hover:text-secondary hover:bg-text text-text font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Send

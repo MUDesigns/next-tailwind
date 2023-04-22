@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, ReactNode } from "react";
 
 interface Props {
@@ -23,13 +23,19 @@ const Layout = ({ children }: Props) => {
       <header className="bg-secondary flex items-center justify-between py-4 px-6">
         <div className="flex items-center">
           <button
-            className="text-2xl text-text hover:text-accent focus:outline-none"
+            className="text-2xl text-text hover:text-primary focus:outline-none self-start"
             onClick={toggleNav}
             aria-label={isNavOpen ? "Close menu" : "Open menu"}
           >
             ☰
           </button>
-          <h1 className="text-3xl font-bold ml-4">Matthew Nyce</h1>
+          <Image
+            src="/images/logo.png"
+            alt="Matthew Nyce"
+            width={150}
+            height={100}
+            className="ml-4"
+          />
         </div>
         <a
           href="/documents/Matthew-Nyce.pdf"
@@ -53,7 +59,7 @@ const Layout = ({ children }: Props) => {
         }`}
       >
         <button
-          className="text-2xl text-text hover:text-accent focus:outline-none"
+          className="text-2xl text-text hover:text-primary focus:outline-none"
           onClick={toggleNav}
           aria-label="Close menu"
         >
@@ -62,28 +68,28 @@ const Layout = ({ children }: Props) => {
         <ul className="mt-8">
           <li className="mb-6">
             <Link href="/">
-              <span className="text-2xl font-bold hover:text-accent cursor-pointer">
+              <span className="text-2xl font-bold hover:text-primary cursor-pointer">
                 Home
               </span>
             </Link>
           </li>
           <li className="mb-6">
             <Link href="/about">
-              <span className="text-2xl font-bold hover:text-accent cursor-pointer">
+              <span className="text-2xl font-bold hover:text-primary cursor-pointer">
                 About
               </span>
             </Link>
           </li>
           <li className="mb-6">
             <Link href="/projects">
-              <span className="text-2xl font-bold hover:text-accent cursor-pointer">
+              <span className="text-2xl font-bold hover:text-primary cursor-pointer">
                 Projects
               </span>
             </Link>
           </li>
           <li>
             <Link href="/contact">
-              <span className="text-2xl font-bold hover:text-accent cursor-pointer">
+              <span className="text-2xl font-bold hover:text-primary cursor-pointer">
                 Contact
               </span>
             </Link>
@@ -96,6 +102,12 @@ const Layout = ({ children }: Props) => {
       <footer className="bg-secondary py-8">
         <div className="container mx-auto text-center">
           <p>&copy; Matthew Nyce 2023</p>
+          <div>
+            Logo created by{" "}
+            <a href="https://www.designevo.com/" title="Free Online Logo Maker">
+              DesignEvo logo maker
+            </a>
+          </div>
         </div>
       </footer>
     </div>

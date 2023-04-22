@@ -2,7 +2,7 @@
 
 const AboutPage = () => {
   return (
-      <section className="mx-auto py-20">
+      <section className="mx-auto py-20 px-5">
         <h2 className="text-5xl font-bold mb-16 text-center text-text">
           About Me
         </h2>
